@@ -1,0 +1,31 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0f0f;
+    padding: 20px 8px 20px 8px;
+    border-radius: 10px;
+}
+.name{
+    color: #fff;
+    font-family: 'Epilouge',sans-serif;
+}
+.image{
+    object-fit: cover;
+}
+.rating{
+    position: relative;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    clip-path: circle(50% at 50% 50%);
+}
+.ratingInner{
+     background-color: #000;
+   
+   padding-top: 7px;
+    padding-left: 7px;
+    width: 23px;
+    height: 23px;
+    clip-path: circle(50% at 50% 50%);
+}
+
