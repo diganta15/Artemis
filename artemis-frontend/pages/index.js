@@ -1,4 +1,5 @@
 import { useUser } from '@auth0/nextjs-auth0';
+
 import Landing from '../components/Landing';
 import Layout from '../components/Layout';
 import styles from '../styles/Home.module.css'

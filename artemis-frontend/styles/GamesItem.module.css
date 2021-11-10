@@ -1,31 +1,55 @@
-.card{
+.card {
+	display: flex;
+	flex-direction: column;
+	/* background-color: #181717; */
+	padding: 20px 8px 20px 8px;
+	border: 1px solid #fff;
+	border-radius: 4px;
+}
+.name {
+	color: #fff;
+	font-family: "Roboto",sans-serif;
+	padding-top: 8px;
+	border-bottom: 1px solid #fff;
+}
+.image {
+	object-fit: cover;
+}
+.released{
+	color: #fff;
+	font-family: "Roboto",sans-serif;
+	
+}
+.metacriticRating {
+	color: #fff;
+	font-family: "Nunito", sans-serif;
+}
+.platforms {
+	color: #fff;
+	display: flex;
+	font-size: 17px;
+	font-family: "Nunito", sans-serif;
+}
+.platform {
+	padding-top: 3px;
+	display: flex;
+	justify-content: space-evenly;
+	width: 50%;
+}
+.esrb {
+	color: #fff;
     display: flex;
-    flex-direction: column;
-    background-color: #0f0f0f;
-    padding: 20px 8px 20px 8px;
-    border-radius: 10px;
+    	font-family: "Nunito", sans-serif;
 }
-.name{
-    color: #fff;
-    font-family: 'Epilouge',sans-serif;
+.esrb span{
+    padding-left: 10px;
 }
-.image{
-    object-fit: cover;
+.playtime{
+	color: #fff;
+	display: flex;
+	font-size: 17px;
+	font-family: "Nunito", sans-serif;
 }
-.rating{
-    position: relative;
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    clip-path: circle(50% at 50% 50%);
+.playtime span{
+	padding-left: 10px;
 }
-.ratingInner{
-     background-color: #000;
-   
-   padding-top: 7px;
-    padding-left: 7px;
-    width: 23px;
-    height: 23px;
-    clip-path: circle(50% at 50% 50%);
-}
-
