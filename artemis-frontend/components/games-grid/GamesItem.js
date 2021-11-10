@@ -18,15 +18,15 @@ export default function GamesItem({ item }) {
 		style.color = "red";
 	}
 	if (rating < 3.7 && rating > 2) {
-		style.color = "yellow";
+		style.color = "#fcff82";
 	}
 	if (rating > 3.7) {
-		style.color = "green";
+		style.color = "#42b883";
 	}
 	return (
 		<div className={styles.card}>
 			<Link href={`/games/${item.slug}`}>
-				<a>
+				<a className={styles.link}>
 					<Image
 						src={item.background_image}
 						className={styles.image}

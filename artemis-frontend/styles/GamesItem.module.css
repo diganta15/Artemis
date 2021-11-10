@@ -1,10 +1,17 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	/* background-color: #181717; */
-	padding: 20px 8px 20px 8px;
-	border: 1px solid #fff;
-	border-radius: 4px;
+	background-color: #181717;
+
+	border-radius: 10px;
+}
+
+.link{
+	text-decoration: none;
+	color: #fff;
+}
+.details{
+		padding: 6px 8px 20px 8px;
 }
 .name {
 	color: #fff;
@@ -14,6 +21,8 @@
 }
 .image {
 	object-fit: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
 }
 .released{
 	color: #fff;

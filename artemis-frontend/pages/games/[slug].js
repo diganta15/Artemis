@@ -1,14 +1,17 @@
 import Layout from "../../components/Layout";
-export default function GameDetails({slug}) {
+import { GameDetails } from "../../components/game-details/GameDetails";
+import { game } from "../../components/data";
+
+export default function GameDetailsPage({slug}) {
     return (
-        <div>
-            <h1>Games Details</h1>
-        </div>
+        <Layout>
+            <GameDetails game={game} />
+        </Layout>
     )
 }
 
 export async function getServerSideProps({ query: { slug }}) {
-    console.log(slug);
+
     return{
         props:{
             slug:slug
