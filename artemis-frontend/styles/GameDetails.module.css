@@ -1,0 +1,29 @@
+.container{
+    color: #fff;
+    font-family: 'Epilouge', sans-serif;
+    background-color: #000;
+}
+.imageWrapper{
+    padding-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imageWrapper img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.name{
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.description{
+    padding-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 14rem;
+    margin-right: 14rem;
+    text-align: justify;
+    line-height: 1.8;
+}
