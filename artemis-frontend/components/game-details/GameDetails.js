@@ -9,7 +9,10 @@ export const GameDetails = ({ game }) => {
 		developers,
 		esrb_rating,
 		publishers,
+		platforms,
 		rating,
+		playtime,
+		tags,
 		ratings,
 		stores,
 		metacritic,
@@ -39,10 +42,14 @@ export const GameDetails = ({ game }) => {
 				/>
 			</div>
 
-			<h1 className={styles.name}>{game.name}</h1>
+			<h1 className={styles.name}>{name}</h1>
 			<div
 				className={styles.description}
 				dangerouslySetInnerHTML={{ __html: description }}></div>
+			<div className={styles.playtime}>
+				<h3>Playtime</h3>
+				<span>{playtime} hours</span>
+			</div>
 			<div className={styles.developers}>
 				<h2>Developed By</h2>
 				<span>
@@ -68,23 +75,47 @@ export const GameDetails = ({ game }) => {
 				</p>
 				<div className={styles.ratings}>
 					<div>
-						<p>Exceptional</p>
+						<p className={styles.exceptional}>Exceptional</p>
 						<span>{ratings[0].percent}%</span>
 					</div>
 					<div>
-						<p>Recommended</p>
+						<p className={styles.recommended}>Recommended</p>
 						<span>{ratings[1].percent}%</span>
 					</div>
 					<div>
-						<p>Meh</p>
+						<p className={styles.meh}>Meh</p>
 						<span>{ratings[2].percent}%</span>
 					</div>
 					<div>
-						<p>Skip</p>
+						<p className={styles.skip}>Skip</p>
 						<span>{ratings[3].percent}%</span>
 					</div>
 				</div>
 			</div>
+			<div className={styles.platforms}>
+				<h3>Available On</h3>
+				<div>
+					{platforms.map((platform) => (
+						<h4 key={platform.platform.id}>{platform.platform.name}</h4>
+					))}
+				</div>
+			</div>
+			<div className={styles.tags}>
+				<h3>Tags</h3>
+				<span>
+					{tags.map((tag) => (
+						<p key={tag.id}>{tag.name}</p>
+					))}
+				</span>
+			</div>
+			{/* <div className={styles.stores}>
+				<h3>Stores</h3>
+				<span>
+					{stores.map((store) => (
+						<a href={store.store.domain} key={store.id}>{store.store.name}</a>
+					))}
+				</span>
+			</div> */}
 		</div>
 	);
 };
