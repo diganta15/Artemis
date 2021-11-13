@@ -5,9 +5,9 @@ export default function Menu() {
         <div className={styles.menu} >
             <h1 className={styles.header}>Menu</h1>
             <div className={styles.menuItems}>
-                <MenuItem title="My Games" />
-                <MenuItem title="Wishlist" />
-                <MenuItem title="For You" />
+                <MenuItem title="My Games" icon={"fas fa-gamepad"} link="mygames" />
+                <MenuItem title="Wishlist" icon={"fas fa-list"} link="wishlist"  />
+                <MenuItem title="Steam" icon={"fab fa-steam"} link="steam" />
             </div>
         </div>
     )

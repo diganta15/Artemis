@@ -11,8 +11,6 @@ export default function Platform({slug}) {
     }
 
     return (
-        <div>
-           
-        </div>
+       null
     )
 }

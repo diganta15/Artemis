@@ -9,11 +9,8 @@ export default function Dashboard() {
 	const { user, isLoading, error } = useUser();
 
 	return (
-		<Layout>
-			<div className={styles.container} >
-				<div className={styles.header}>
-					<h1>Dashboard</h1>
-				</div>
+		<Layout title="Dashboard">
+			<div className={styles.container}>
 				<div className={styles.mainGrid}>
 					<Menu />
 					<Games />

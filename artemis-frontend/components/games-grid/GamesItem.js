@@ -37,18 +37,21 @@ export default function GamesItem({ item }) {
 					<div className={styles.details}>
 						<h3 className={styles.name}>{item.name}</h3>
 						<h2 style={style}>{item.rating}</h2>
-						<p className={styles.released}>
-							Released:{" "}
-							{date.getDate() +
-								"/" +
-								date.getMonth() +
-								"/" +
-								date.getFullYear()}{" "}
-						</p>
+						<div className={styles.released}>
+							<p >Released: </p>
+							<span>
+								{date.getDate() +
+									"/" +
+									date.getMonth() +
+									"/" +
+									date.getFullYear()}{" "}
+							</span>
+						</div>
 						<div className={styles.metacriticRating}>
 							<p>
-								Metacritic: <span>{item.metacritic}</span>
+								Metacritic: 
 							</p>
+							<span>{item.metacritic}</span>
 						</div>
 						<div className={styles.platforms}>
 							<p>Platforms: </p>

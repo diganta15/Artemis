@@ -1,6 +1,4 @@
 .card {
-
-
 	background-color: #2a2b32;
 	border: 10px solid;
 	border-image-slice: 1;
@@ -11,6 +9,11 @@
 	padding: 10px;
 	margin: 10px;
 }
-.card span{
+.link{
+	text-decoration: none;
+	color: #fff;
+}
+.card i {
+	margin-top: 4px;
 	margin-right: 10px;
 }

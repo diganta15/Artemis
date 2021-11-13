@@ -4,7 +4,7 @@ import { game } from "../../components/data";
 
 export default function GameDetailsPage({slug}) {
     return (
-        <Layout>
+        <Layout title={slug} >
             <GameDetails game={game} />
         </Layout>
     )
