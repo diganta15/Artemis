@@ -1,0 +1,18 @@
+.menu {
+	color: #fff;
+	margin: 20px 10px 10px 30px;
+    font-family: 'Roboto', sans-serif;
+    border-right: 1px solid #fff;
+
+}
+.header{
+    border-bottom: 1px solid #fff;
+}
+.menuItems {
+	display: flex;
+    flex-direction: column;
+	justify-content: space-between;
+
+	margin: 0;
+	padding: 40px 0px;
+}

@@ -1,0 +1,78 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: #1D2026;;
+	border: 1px solid #30333b;
+	border-radius: 10px;
+}
+
+.link {
+	text-decoration: none;
+	color: #fff;
+}
+.details {
+	padding: 6px 8px 20px 8px;
+}
+.details > *{
+	margin-bottom: 4px;
+}
+.name {
+	color: rgb(180, 180, 180);
+	font-family: "Roboto", sans-serif;
+	padding-top: 8px;
+	/* border-bottom: 1px solid #fff; */
+}
+.image {
+	object-fit: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.released {
+	color: #fff;
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	justify-content: space-between;
+}
+.metacriticRating {
+	color: #fff;
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	justify-content: space-between;
+}
+.platforms {
+	color: #fff;
+	display: flex;
+	font-size: 17px;
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	justify-content: space-between;
+}
+.platform {
+	padding-top: 3px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.platform i {
+	margin-right: 4px;
+}
+.esrb {
+	color: #fff;
+	display: flex;
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	justify-content: space-between;
+}
+.esrb span {
+	padding-left: 10px;
+}
+.playtime {
+	color: #fff;
+	display: flex;
+	font-size: 17px;
+	font-family: "Nunito", sans-serif;
+	display: flex;
+	justify-content: space-between;
+}
+.playtime span {
+	padding-left: 10px;
+}

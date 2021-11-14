@@ -1,0 +1,13 @@
+/* .header{
+    margin-left: 30px;
+    font-size: 10px;
+    color: #fff;
+    font-family: 'Epilouge', sans-serif;
+} */
+.mainGrid{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.container{
+    background-color: #1D2026;
+}
