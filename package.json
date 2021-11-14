@@ -4,7 +4,7 @@
   "description": "One simplified application to meet all your gaming needs",
   "main": "server.js",
   "scripts": {
-    "server":"npm run start --prefix backend",
+    "server": "npm run start --prefix backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Diganta Das",
