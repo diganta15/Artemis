@@ -3,13 +3,16 @@ describe("Header", () => {
 		cy.visit("http://localhost:3000");
 
 		cy.get("h1").contains("Artemis");
-        cy.get("a").contains("Login");
+        cy.contains("Login").click();
+        cy.get("input[name=username]").type("admin");
+        cy.get("input[name=password]").type("admin");
+        cy.contains("Continue").click();
+        
 	});
 
 
-    it("Should check if the login button is working",()=>{
-        cy.visit("http://localhost:3000");
-        cy.get("a").contains("Login").click();
-    })
+    // it("Should make login request",()=>{
+        
+    // });
 });
 
