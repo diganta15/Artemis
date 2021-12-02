@@ -27,30 +27,36 @@ export default function GamesItem({ item }) {
 		<div className={styles.card}>
 			<Link href={`/games/${item.slug}`}>
 				<a className={styles.link}>
-					<Image
-						src={item.background_image}
-						className={styles.image}
-						width={350}
-						height={170}
-					/>
+					
+						{
+						item.background_image ? (<Image
+							src={item.background_image}
+							className={styles.image}
+							width={350}
+							height={170}
+						/>):(<span className={styles.noImage}>
+								<i className="fas fa-image fa-10x"></i>
+						</span>)
+						}
+					
 
 					<div className={styles.details}>
-						<h3 className={styles.name}>{item.name}</h3>
-						<h2 style={style}>{item.rating}</h2>
-						<div className={styles.released}>
-							<p >Released: </p>
-							<span>
-								{date.getDate() +
-									"/" +
-									date.getMonth() +
-									"/" +
-									date.getFullYear()}{" "}
-							</span>
-						</div>
+						{item.name && <h3 className={styles.name}>{item.name}</h3>}
+						{item.rating && <h2 style={style}>{item.rating}</h2>}
+						{item.released && (
+							<div className={styles.released}>
+								<p>Released: </p>
+								<span>
+									{date.getDate() +
+										"/" +
+										date.getMonth() +
+										"/" +
+										date.getFullYear()}{" "}
+								</span>
+							</div>
+						)}
 						<div className={styles.metacriticRating}>
-							<p>
-								Metacritic: 
-							</p>
+							<p>Metacritic:</p>
 							<span>{item.metacritic}</span>
 						</div>
 						<div className={styles.platforms}>
@@ -65,10 +71,13 @@ export default function GamesItem({ item }) {
 								))}
 							</span>
 						</div>
-						<div className={styles.esrb}>
-							<p>ESRB: </p>
-							<span>{item.esrb_rating.name}</span>
-						</div>
+						{item.esrb_rating && (
+							<div className={styles.esrb}>
+								<p>ESRB: </p>
+
+								<span>{item.esrb_rating.name || "Not available"}</span>
+							</div>
+						)}
 						<div className={styles.playtime}>
 							<p>Play Time: </p>
 							<span>{item.playtime} hrs</span>

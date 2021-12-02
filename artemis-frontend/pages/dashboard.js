@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Games from "../components/games-grid/Games";
 import Menu from "../components/menu/Menu";
 
-export default function Dashboard({data}) {
+export default function Dashboard({dataPopular, dataRating}) {
 	const { user, isLoading, error } = useUser();
 
 	console.log(user)
@@ -16,7 +16,7 @@ export default function Dashboard({data}) {
 			<div className={styles.container}>
 				<div className={styles.mainGrid}>
 					<Menu />
-					<Games data={data.results} />
+					<Games popular={dataPopular.results} topRated={dataRating.results} />
 				</div>
 			</div>
 		</Layout>
@@ -24,14 +24,16 @@ export default function Dashboard({data}) {
 }
 
 export async function getServerSideProps() {
-	const res = await fetch("http://localhost:3000/api/games/popular");
+	const resPopular = await fetch("http://localhost:3000/api/games/popular");
+	const dataPopular = await resPopular.json();
 
-	const data = await res.json();
-
+	const resRating = await fetch("http://localhost:3000/api/games/toprated");
+	const dataRating = await resRating.json();
 
 	return {
 		props:{
-			data
+			dataPopular,
+			dataRating
 		}
 	}
 }

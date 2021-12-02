@@ -6,3 +6,10 @@
     color: #fff;
 
 }
+
+@media (max-width: 768px) {
+    .games{
+        margin: 0px;
+        padding: 10px;
+    }
+}

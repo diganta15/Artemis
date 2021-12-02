@@ -11,3 +11,10 @@
 .container{
     background-color: #1D2026;
 }
+
+@media screen and (max-width: 768px) {
+    .mainGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
