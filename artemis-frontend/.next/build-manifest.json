@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/dashboard.js"
     ],
-    "/steam": [
+    "/games/[slug]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/steam.js"
+      "static/chunks/pages/games/[slug].js"
     ]
   },
   "ampFirstPages": []
